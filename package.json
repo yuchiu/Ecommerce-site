@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -19,6 +20,8 @@
     "@vue/cli-plugin-pwa": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-airbnb": "^3.0.1",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
@@ -28,10 +31,7 @@
     "env": {
       "node": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/airbnb"
-    ],
+    "extends": ["plugin:vue/essential", "plugin:prettier/recommended"],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -42,9 +42,5 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
